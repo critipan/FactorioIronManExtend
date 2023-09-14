@@ -9,6 +9,9 @@ flag_ironman = data.raw.item["arc-reactor"] ~= nil
 
 -- 执行加载操作
 
-if not flag_ironman then
+if flag_ironman then
+    
+else
     require("prototypes.arc-reactor")
+    require("prototypes.advanced-exoskeleton")
 end
