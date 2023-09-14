@@ -6,8 +6,8 @@
   "license": "https://mods.factorio.com",
   "description": "钢铁侠扩展,提供了方舟反应炉,高级外骨骼等组件。可兼容IronMan_WarMachine模组",
   "factorio_version": "1.1",
-  "source":"https://github.com/critipan/FactorioIronManExtend",
   "dependencies":[
+    "base >= 1.1.50",
     "? IronMan_WarMachine >= 2.0.1",
     "? space-exploration >= 0.6.113"
   ]
