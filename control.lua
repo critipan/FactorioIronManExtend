@@ -16,6 +16,6 @@ script.on_load(add_iron_armor_to_se)
 
 remote.add_interface("ironman-extend",{
   jetpack_fuels = function()
-    return {["arc-reactor-battery"]}
+    return {["arc-reactor-battery"] = 100}
   end
 })
