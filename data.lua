@@ -11,8 +11,9 @@ local flag_se = mods["space-exploration"] ~= nil
 -- 执行加载操作
 -- 启用钢铁侠mod
 if flag_ironman then
-    
+    table.insert(data.raw.technology["arc-reactor"].effects,{type = "unlock-recipe",recipe = "arc-reactor-battery"})
 else
+    require("prototypes.tech")
     require("prototypes.arc-reactor")
     require("prototypes.advanced-exoskeleton")
 end
@@ -20,8 +21,6 @@ end
 
 -- 启用钢铁侠和se
 if flag_ironman and flag_se then
-
-
     -- 替换钢铁侠盔甲的合成表
     data.raw.recipe["iron-armor"].ingredients = {
         {"se-thruster-suit-4", 1},
@@ -31,3 +30,7 @@ if flag_ironman and flag_se then
         {"alien-biomatter", 500}
        }
 end
+
+
+
+require("prototypes.arc-reactor-battery")
