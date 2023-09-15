@@ -6,7 +6,7 @@ SE_NAME = "space-exploration"
 add_iron_armor_to_se = function() 
   -- TODO 将API名称改为SE新增的相关API名称
   api_name = "set_thruster_suit"
-  if(remote.interfaces[SE_NAME][api_name]) then
+  if(remote.interfaces[SE_NAME] and remote.interfaces[SE_NAME][api_name]) then
     remote.call(SE_NAME, api_name, {name="iron-armor", thrust=6})
   end
 end
@@ -16,6 +16,6 @@ script.on_load(add_iron_armor_to_se)
 
 remote.add_interface("ironman-extend",{
   jetpack_fuels = function()
-    return {["arc-reactor-battery"] = 100}
+    return {["arc-reactor-battery"] = 1}
   end
 })
